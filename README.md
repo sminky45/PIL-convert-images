@@ -13,5 +13,5 @@ for infile in os.lisdir():
       with Image.open(infile).convert('RGB') as im:
         im.thumbnail (size)
         im.rotate (270).save("/opt/icons/" + outfile, "JPEG")
-   exept OSError:
+   except OSError:
      pass
